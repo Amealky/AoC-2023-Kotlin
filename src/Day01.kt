@@ -19,8 +19,11 @@ fun main() {
         input.forEach {sentence ->
             val sentenceToDigitalize = sentence.toCharArray()
             numberDictionnary.forEachIndexed { index, s ->
+                //Only need to get the digit of the first and last number words
                 val numberIndexFirst = sentence.indexOf(s)
                 val numberIndexLast = sentence.lastIndexOf(s)
+
+                //We do index+1 cause the digit value is equal to the index position + 1 ( ex : One index = 0 so 0+1 = 1 one )
                 if(numberIndexFirst != -1) sentenceToDigitalize[numberIndexFirst] = (index+1).digitToChar()
                 if(numberIndexLast != -1) sentenceToDigitalize[numberIndexLast] = (index+1).digitToChar()
             }
