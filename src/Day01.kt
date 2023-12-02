@@ -36,7 +36,7 @@ fun main() {
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day01_test")
     //check(part1(testInput) == 142)
-    check(part2(testInput) == 500)
+    check(part2(testInput) == 281)
     //print("DAY 01 TEST Result : part 1 -> ")
     //part1(testInput).println()
 
