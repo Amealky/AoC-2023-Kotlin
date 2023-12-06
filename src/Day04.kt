@@ -1,10 +1,6 @@
 
 fun main() {
 
-    fun extractNumbers(numbers: String) : List<String> {
-        val regex = Regex("[0-9]+")
-        return regex.findAll(numbers).map { it.value }.toList()
-    }
 
     fun cardSolver(line: String, winCallback: () -> Unit) {
         val cardNumbers = line.split(":")[1]

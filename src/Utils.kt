@@ -19,3 +19,14 @@ fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteA
  * The cleaner shorthand for printing output.
  */
 fun Any?.println() = println(this)
+
+
+fun extractNumbers(numbers: String) : List<String> {
+    val regex = Regex("[0-9]+")
+    return regex.findAll(numbers).map { it.value }.toList()
+}
+
+fun stringIsNumber(str: String) : Boolean {
+    val symbolRegex =  Regex("[0-9]")
+    return symbolRegex.matches(str)
+}
