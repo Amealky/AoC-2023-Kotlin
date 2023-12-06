@@ -121,7 +121,8 @@ fun main() {
 
 
     fun part2(input: List<String>): Long {
-
+        //Get a script that work but too shame to be in public ( bruteforce method )
+        //Need to be enhanced but no time for now
         return -1L
     }
 
