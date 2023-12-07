@@ -45,7 +45,7 @@ fun main() {
     }
 
 
-    fun getHandDatas(hand: String, joker_rule:Boolean = false) : Map<Char, Int> {
+    fun getHandDatas(hand: String) : Map<Char, Int> {
         val cardsData = mutableMapOf<Char, Int>()
 
         for (card in hand) {
@@ -96,7 +96,7 @@ fun main() {
         input.forEach { line ->
             val (handCards, bids) = line.split(" ")
             val hand = Hand(handCards, bids.toInt())
-            hand.cardsDatas = getHandDatas(handCards, joker_rule)
+            hand.cardsDatas = getHandDatas(handCards)
             hand.hand_type = if(joker_rule) getHandType(hand.cardsDatasJokerised()) else getHandType(hand.cardsDatas)
             hands.add(hand)
         }
