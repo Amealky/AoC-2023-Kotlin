@@ -2,11 +2,14 @@ import java.math.BigInteger
 import java.security.MessageDigest
 import kotlin.io.path.Path
 import kotlin.io.path.readLines
+import kotlin.io.path.readText
 
 /**
  * Reads lines from the given input txt file.
  */
 fun readInput(name: String) = Path("src/$name.txt").readLines()
+
+fun readInputString(name:String) = Path("src/$name.txt").readText()
 
 /**
  * Converts string to md5 hash.
@@ -29,4 +32,11 @@ fun extractNumbers(numbers: String) : List<String> {
 fun stringIsNumber(str: String) : Boolean {
     val symbolRegex =  Regex("[0-9]")
     return symbolRegex.matches(str)
+}
+
+
+/*** Extensions ***/
+
+fun String.onlyContains(char: Char) : Boolean {
+    return this.all { it == char }
 }
