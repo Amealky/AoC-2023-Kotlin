@@ -40,3 +40,11 @@ fun stringIsNumber(str: String) : Boolean {
 fun String.onlyContains(char: Char) : Boolean {
     return this.all { it == char }
 }
+
+fun List<String>.onlyContains(value: String) : Boolean {
+    return this.all { it == value }
+}
+
+fun List<String>.onlyFinishBySame(char: Char) : Boolean {
+    return this.all{ it.endsWith(char)}
+}
