@@ -25,7 +25,7 @@ fun Any?.println() = println(this)
 
 
 fun extractNumbers(numbers: String) : List<String> {
-    val regex = Regex("[0-9]+")
+    val regex = Regex("-?[0-9]+")
     return regex.findAll(numbers).map { it.value }.toList()
 }
 
@@ -47,4 +47,8 @@ fun List<String>.onlyContains(value: String) : Boolean {
 
 fun List<String>.onlyFinishBySame(char: Char) : Boolean {
     return this.all{ it.endsWith(char)}
+}
+
+fun <T> List<T>.onlyContains(value: T) : Boolean {
+    return this.all { it == value }
 }
