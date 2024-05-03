@@ -1,4 +1,4 @@
-# AoC-2023-Kotlin
+# AoC-2023-Kotlin 🎅
 
 
 Made with [IntelliJ 2023.3](https://www.jetbrains.com/idea/download/other.html)
